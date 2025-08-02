@@ -33,24 +33,21 @@ const Contact = () => {
                 <strong className={theme === "theme3" ? "text-purple-800" : ""}>
                   Email:
                 </strong>
-                <br />
-                hello@themeapp.com
+                <br /> hr@hipster-inc.com
               </div>
               <div>
                 <strong className={theme === "theme3" ? "text-purple-800" : ""}>
                   Phone:
                 </strong>
                 <br />
-                +1 (555) 123-4567
+                +6582314107
               </div>
               <div>
                 <strong className={theme === "theme3" ? "text-purple-800" : ""}>
                   Address:
                 </strong>
                 <br />
-                123 Design Street
-                <br />
-                Creative District, CD 12345
+                01-04, 75 Ayer Rajah Crescent, 139953, Singapore UEN.201621408D
               </div>
             </div>
           </div>
@@ -140,3 +137,4 @@ const Contact = () => {
 };
 
 export default Contact;
+  
