@@ -1,31 +1,33 @@
 # Swaraj Phalke - Software Intern Assignment - Multi-Theme Switcher App
 
 ## 🌐 Live Demo
-[https://theme-switcher-plum.vercel.app/]  
+[https://theme-switcher-plum.vercel.app/] 
+
+**Deployed on:** Vercel
  
 ---
 
 ## 📁 Folder Structure
-public/ 
-src/
-├── components/
-│ └── Header.tsx
-├── context/
-│ └── ThemeContext.tsx
-├── pages/
-│ ├── Home.tsx
-│ ├── About.tsx
-│ └── Contact.tsx
-├── styles/
-│ └── themes.ts
-├── App.tsx
-├── index.tsx
-├── index.css
-.gitignore
-README.md
-package.json
-tailwind.config.js
-tsconfig.json
+public/  <br/>
+src/<br/>
+├── components/<br/>
+│ └── Header.tsx<br/>
+├── context/<br/>
+│ └── ThemeContext.tsx<br/>
+├── pages/<br/>
+│ ├── Home.tsx<br/>
+│ ├── About.tsx<br/>
+│ └── Contact.tsx<br/>
+├── styles/<br/>
+│ └── themes.ts<br/>
+├── App.tsx<br/>
+├── index.tsx<br/>
+├── index.css<br/>
+.gitignore<br/>
+README.md<br/>
+package.json<br/>
+tailwind.config.js<br/>
+tsconfig.json<br/>
 
 ---
 
@@ -70,7 +72,7 @@ The selected theme is **persisted** using `localStorage`.
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React (Vite or CRA) + TypeScript
+- **Frontend:** React (CRA) + TypeScript
 - **State Management:** React Context API
 - **Styling:** TailwindCSS
 - **Routing:** React Router DOM
@@ -91,9 +93,19 @@ cd multi-theme-switcher-app
 npm install
 npm start
 ```
-### Submission Info
-GitHub Repo: https://github.com/your-username/multi-theme-switcher-app
-Job Role: Software Interface Engineer
-Submitted to: Hipster Pte. Ltd.
-Deadline: Aug 4, 10:00 AM IST
 
+---
+
+## 🔐 Security Practices Followed
+- No direct DOM manipulation
+- Clean code structure
+- Linted and type-checked with TypeScript
+- API keys or tokens are not exposed
+
+---
+
+## Submission Info
+-**GitHub Repo:** https://github.com/your-username/multi-theme-switcher-app 
+-**Job Role:** Software Interface Engineer
+-**Submitted** to: Hipster Pte. Ltd.
+-**Deadline:** Aug 4, 10:00 AM IST
