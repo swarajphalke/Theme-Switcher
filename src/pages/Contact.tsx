@@ -1,8 +1,10 @@
 import { useTheme } from "../context/ThemeContext";
 
+// Contact page component
 const Contact = () => {
-  const { theme, themeConfig } = useTheme();
+  const { theme, themeConfig } = useTheme(); // Access theme settings
 
+  // Adjust top padding based on selected theme
   const containerPadding =
     theme === "theme1" ? "pt-20" : theme === "theme2" ? "pt-0" : "pt-4";
 
@@ -11,11 +13,13 @@ const Contact = () => {
       <div className={themeConfig.container}>
         <h1 className={themeConfig.text.heading}>Contact Us</h1>
 
+        {/* Responsive layout for Contact and Form section */}
         <div
           className={`grid ${
             theme === "theme2" ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2"
           } gap-8`}
         >
+          {/* Contact Details */}
           <div className={themeConfig.card}>
             <h2
               className={`${themeConfig.text.primary} ${
@@ -52,6 +56,7 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Contact Form */}
           <div className={themeConfig.card}>
             <h2
               className={`${themeConfig.text.primary} ${
@@ -65,6 +70,7 @@ const Contact = () => {
               Send Message
             </h2>
             <form className="space-y-4">
+              {/* Name Input */}
               <div>
                 <label
                   className={`block text-sm font-medium mb-1 ${themeConfig.text.primary}`}
@@ -82,6 +88,8 @@ const Contact = () => {
                   }`}
                 />
               </div>
+
+              {/* Email Input */}
               <div>
                 <label
                   className={`block text-sm font-medium mb-1 ${themeConfig.text.primary}`}
@@ -99,6 +107,8 @@ const Contact = () => {
                   }`}
                 />
               </div>
+
+              {/* Message Textarea */}
               <div>
                 <label
                   className={`block text-sm font-medium mb-1 ${themeConfig.text.primary}`}
@@ -116,6 +126,8 @@ const Contact = () => {
                   }`}
                 />
               </div>
+
+              {/* Submit Button */}
               <button
                 type="submit"
                 className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
@@ -137,4 +149,3 @@ const Contact = () => {
 };
 
 export default Contact;
-  

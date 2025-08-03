@@ -1,4 +1,4 @@
-// src/styles/themes.ts
+// Each theme defines layout, styling, text formats, and grid/card designs
 export const themes = {
   theme1: {
     name: "Minimalist",
@@ -44,4 +44,5 @@ export const themes = {
   },
 };
 
+// Defines the structure of each theme, used for type-safety in context
 export type ThemeConfig = typeof themes.theme1;

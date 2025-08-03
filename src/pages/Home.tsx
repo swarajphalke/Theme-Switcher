@@ -1,4 +1,3 @@
-// src/pages/Home.tsx
 import { useEffect, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 
@@ -6,12 +5,14 @@ const Home = () => {
   const [products, setProducts] = useState<any[]>([]);
   const { theme, themeConfig, isTransitioning } = useTheme();
 
+  // Fetch products from Fake Store API on initial render
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then(setProducts);
   }, []);
 
+  // Dynamic top padding based on theme
   const containerPadding =
     theme === "theme1" ? "pt-20" : theme === "theme2" ? "pt-0" : "pt-4";
 
@@ -23,6 +24,8 @@ const Home = () => {
     >
       <div className={themeConfig.container}>
         <h1 className={themeConfig.text.heading}>Welcome to ThemeApp</h1>
+
+        {/* Introductory paragraph with theme-based styling */}
         <p
           className={`${themeConfig.text.secondary} mb-8 ${
             theme === "theme1"
@@ -40,6 +43,7 @@ const Home = () => {
             "Discover premium products in our modern, professional marketplace! 🌟"}
         </p>
 
+        {/* Product Grid */}
         <div
           className={`grid ${themeConfig.grid} ${
             isTransitioning ? "scale-[0.99]" : "scale-100"
@@ -50,6 +54,7 @@ const Home = () => {
               key={product.id}
               className={`${themeConfig.card} transition-all duration-300`}
             >
+              {/* Product Image */}
               <div className={`${theme === "theme3" ? "mb-4" : "mb-3"}`}>
                 <img
                   src={product.image}
@@ -79,6 +84,7 @@ const Home = () => {
                 </span>
               </div>
 
+              {/* Product Title */}
               <h2
                 className={`${themeConfig.text.primary} ${
                   theme === "theme1"
@@ -91,7 +97,7 @@ const Home = () => {
                 {product.title}
               </h2>
 
-              {/* Rating */}
+              {/* Rating Section */}
               <div
                 className={`flex items-center ${
                   theme === "theme3" ? "justify-center" : ""

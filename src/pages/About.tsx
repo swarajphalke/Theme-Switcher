@@ -1,8 +1,9 @@
 import { useTheme } from "../context/ThemeContext";
 
 const About = () => {
-  const { theme, themeConfig } = useTheme();
+  const { theme, themeConfig } = useTheme(); // Access current theme and styling
 
+  // Padding differs based on theme structure
   const containerPadding =
     theme === "theme1" ? "pt-20" : theme === "theme2" ? "pt-0" : "pt-4";
 
@@ -11,6 +12,7 @@ const About = () => {
       <div className={themeConfig.container}>
         <h1 className={themeConfig.text.heading}>About ThemeApp</h1>
 
+        {/* Card: Our Story */}
         <div className={`${themeConfig.card} mb-8`}>
           <h2
             className={`${themeConfig.text.primary} ${
@@ -23,6 +25,8 @@ const About = () => {
           >
             Our Story
           </h2>
+
+          {/* Paragraph content switches based on selected theme */}
           <p
             className={`${themeConfig.text.secondary} ${
               theme === "theme1"
@@ -41,6 +45,7 @@ const About = () => {
           </p>
         </div>
 
+        {/* Card: Our Mission */}
         <div className={`${themeConfig.card}`}>
           <h2
             className={`${themeConfig.text.primary} ${
@@ -53,6 +58,8 @@ const About = () => {
           >
             Our Mission
           </h2>
+
+          {/* Mission statement based on active theme */}
           <p
             className={`${themeConfig.text.secondary} ${
               theme === "theme1"
