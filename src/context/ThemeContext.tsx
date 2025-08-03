@@ -9,6 +9,8 @@ interface ThemeContextType {
   themeConfig: ThemeConfig;
   setTheme: (theme: ThemeType) => void;
   isTransitioning: boolean;
+  isMenuOpen: boolean;
+  setIsMenuOpen: (open: boolean) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType>({
@@ -16,6 +18,8 @@ const ThemeContext = createContext<ThemeContextType>({
   themeConfig: themes.theme1,
   setTheme: () => {},
   isTransitioning: false,
+  isMenuOpen: false,
+  setIsMenuOpen: () => {},
 });
 
 export const useTheme = () => useContext(ThemeContext);
@@ -25,6 +29,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [theme, setThemeState] = useState<ThemeType>("theme1");
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") as ThemeType;
@@ -44,7 +49,14 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 
   return (
     <ThemeContext.Provider
-      value={{ theme, themeConfig, setTheme, isTransitioning }}
+      value={{
+        theme,
+        themeConfig,
+        setTheme,
+        isTransitioning,
+        isMenuOpen,
+        setIsMenuOpen,
+      }}
     >
       <div
         className={`${themeConfig.layout} transition-all duration-500 ${
