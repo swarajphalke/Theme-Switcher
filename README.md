@@ -105,7 +105,7 @@ npm start
 ---
 
 ## Submission Info
--**GitHub Repo:** https://github.com/your-username/multi-theme-switcher-app 
--**Job Role:** Software Interface Engineer
--**Submitted** to: Hipster Pte. Ltd.
--**Deadline:** Aug 4, 10:00 AM IST
+-**GitHub Repo:** https://github.com/your-username/multi-theme-switcher-app </br>
+-**Job Role:** Software Interface Engineer </br>
+-**Submitted** to: Hipster Pte. Ltd. </br>
+-**Deadline:** Aug 4, 10:00 AM IST </br>
